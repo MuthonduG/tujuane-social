@@ -1,11 +1,11 @@
+import Sidebar from "./components/sidebar/Sidebar";
 import Homepage from "./pages/home/Homepage";
-import { FaHome } from "react-icons/fa";
-
 
 function App() {
   return (
     <>
       <Homepage/>
+      <Sidebar/>
     </>
   );
 }
