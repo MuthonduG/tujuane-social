@@ -1,11 +1,7 @@
-import Sidebar from "./components/sidebar/Sidebar";
+import Profile from "./pages /profile/Profile";
 
 function App() {
-  return (
-    <>
-      <Sidebar/>
-    </>
-  );
+  return <Profile/>;
 }
 
 export default App;
