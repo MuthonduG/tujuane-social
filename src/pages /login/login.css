@@ -48,6 +48,7 @@
       border: 1px solid gray;
       font-size: 18px;
       padding-left: 20px;
+      margin-top: 1rem;
   }
   
   .loginInput:focus{
@@ -63,22 +64,32 @@
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
+      margin: 1rem;
   }
   
   .loginForgot{
       text-align: center;
       color: #1775ee;
   }
-  
-  .loginRegisterButton{
-      width: 60%;
-      align-self: center;
-      height: 50px;
-      border-radius: 10px;
-      border: none;
-      background-color: #0f0f0e;
-      color: white;
-      font-size: 20px;
-      font-weight: 500;
-      cursor: pointer;
+
+  a {
+    max-width: fit-content;
+    max-height: max-content;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #0f0f0e;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+
+  .form_login {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
