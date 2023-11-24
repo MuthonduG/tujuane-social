@@ -4,7 +4,6 @@ import { MdOutlinePermMedia } from "react-icons/md";
 import { FaRegBookmark } from "react-icons/fa";
 import { MdOutlineRoom } from "react-icons/md";
 import { FaRegSmileBeam } from "react-icons/fa";
-import { FaRegShareSquare } from "react-icons/fa";
 import axios from "axios";
 
 export default function Share() {
@@ -13,7 +12,6 @@ export default function Share() {
     content: '',
     image_url: ''
   })
-  const [error, setError] = React.useState(false)
 
   function handleChange(e) {
     const value = e.target.value
@@ -22,7 +20,7 @@ export default function Share() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    
     const postData = {
       title: post.title,
       content: post.content,
@@ -41,8 +39,8 @@ export default function Share() {
           alert('Your post has been shared');
         }
       });
-    } catch (error) {
-      setError(true);
+    } catch (e) {
+      console.log("Error");
     }
   };
   

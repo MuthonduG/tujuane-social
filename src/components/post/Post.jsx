@@ -1,16 +1,8 @@
 import "./post.css";
 import { MdMoreVert } from "react-icons/md";
-import { Users } from "../../dummyData";
-import { useState } from "react";
 
 export default function Post({ post }) {
-  const [like,setLike] = useState(post.like)
-  const [isLiked,setIsLiked] = useState(false)
 
-  const likeHandler =()=>{
-    setLike(isLiked ? like-1 : like+1)
-    setIsLiked(!isLiked)
-  }
   return (
     <div className="post">
       <div className="postWrapper">
