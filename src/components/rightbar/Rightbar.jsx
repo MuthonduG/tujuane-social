@@ -1,21 +1,39 @@
 import "./rightbar.css";
-import { Users } from "../../dummyData";
 import Online from "../online/Online";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 export default function Rightbar({ profile }) {
+  const [users, setUsers] = React.useState()
+  useEffect(() => {
+    // Use an async function to fetch posts when the component mounts
+    const fetchPosts = async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        
+        const response = await axios.get('http://127.0.0.1:3000/users', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        // Assuming the response data is an array of posts
+        setUsers(response.data);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
+
+    fetchPosts();
+  }, []); 
+
   const HomeRightbar = () => {
     return (
       <>
-        <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
-          <span className="birthdayText">
-            <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
-          </span>
-        </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
-        <h4 className="rightbarTitle">Online Friends</h4>
+        <img className="rightbarAd" src="https://i.pinimg.com/originals/8e/eb/4e/8eeb4e7f65f40cc83a72f7b66d1d9b81.gif" alt="" />
+        <h2 className="rightbarTitle">Tujuane Community Users</h2>
         <ul className="rightbarFriendList">
-          {Users.map((u) => (
+          {users && users.map((u) => (
             <Online key={u.id} user={u} />
           ))}
         </ul>
