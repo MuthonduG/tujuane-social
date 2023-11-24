@@ -25,11 +25,14 @@ export default function Login() {
       password: user.password
     }
     try {
-      await axios.post('http://127.0.0.1:3000/log_in', userData).then((response) => {
-        if (response.status === 200) {
-          navigate('/home');
-        }
-      });
+      const response = await axios.post('http://127.0.0.1:3000/log_in', userData);
+
+      if (response.status === 200) {
+        const token = response.data;
+        console.log('Authorization Token:', token);
+        localStorage.setItem('authToken', token);
+        navigate('/home');
+      }
     } catch (error) {
       setError(true);
     }

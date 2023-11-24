@@ -24,8 +24,9 @@
   }
   
   .shareInput {
-    border: none;
+    border: double 2px rgb(65, 61, 61);
     width: 80%;
+    border-radius: 10px;
   }
   
   .shareInput:focus {
@@ -38,12 +39,15 @@
   
   .shareBottom {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
   }
   
   .shareOptions{
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      place-items: center;
       margin-left: 20px;
   }
   
@@ -75,3 +79,10 @@
       color: white;
   }
   
+  .share__form {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
