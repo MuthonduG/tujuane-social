@@ -22,14 +22,21 @@ export default function Share() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const postData = {
       title: post.title,
       content: post.content,
-      image_url: post.image_url
-    }
+      image_url: post.image_url,
+    };
+  
+    const token = localStorage.getItem('authToken');
+  
     try {
-      await axios.post('http://127.0.0.1:3000/log_in', postData).then((response) => {
+      await axios.post('http://127.0.0.1:3000/create_post', postData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then((response) => {
         if (response.status === 200) {
           alert('Your post has been shared');
         }
@@ -37,7 +44,8 @@ export default function Share() {
     } catch (error) {
       setError(true);
     }
-  }
+  };
+  
   const token = localStorage.getItem('authToken');
 
 
