@@ -18,31 +18,23 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src={Users.filter((u) => u.id === post?.userId)[0].profilePicture}
+              src="https://st2.depositphotos.com/1967477/8364/v/950/depositphotos_83642530-stock-illustration-happy-cartoon-emoticon.jpg"
               alt=""
             />
             <span className="postUsername">
-              {Users.filter((u) => u.id === post?.userId)[0].username}
+              Tujuane
             </span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate"><strong>{post.title}</strong></span>
           </div>
           <div className="postTopRight">
             <MdMoreVert/>
           </div>
         </div>
         <div className="postCenter">
-          <span className="postText">{post?.desc}</span>
-          <img className="postImg" src={post.photo} alt="" />
+          <span className="postText">{post?.content}</span>
+          <img className="postImg" src={post.image_url} alt="" />
         </div>
         <div className="postBottom">
-          <div className="postBottomLeft">
-            <img className="likeIcon" src="assets/like.png" onClick={likeHandler} alt="" />
-            <img className="likeIcon" src="assets/heart.png" onClick={likeHandler} alt="" />
-            <span className="postLikeCounter">{like} people like it</span>
-          </div>
-          <div className="postBottomRight">
-            <span className="postCommentText">{post.comment} comments</span>
-          </div>
         </div>
       </div>
     </div>

@@ -46,8 +46,6 @@ export default function Share() {
     }
   };
   
-  const token = localStorage.getItem('authToken');
-
 
   return (
     <div className="share">
