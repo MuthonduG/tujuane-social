@@ -3,8 +3,17 @@ import { FaSearch } from "react-icons/fa";
 import { RxAvatar } from "react-icons/rx";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 export default function Topnav() {
+  const navigate = useNavigate()
+
+  const handleSubmit = async (e) => {
+    localStorage.removeItem('authToken');
+    navigate('/login')
+  };
+  
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -38,7 +47,7 @@ export default function Topnav() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="https://images.pexels.com/photos/19211470/pexels-photo-19211470/free-photo-of-a-smiling-woman-in-traditional-clothing.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load" alt="" className="topbarImg"/>
+        <button className="btn" onClick={handleSubmit} type="submit">Log out</button>
       </div>
     </div>
   );

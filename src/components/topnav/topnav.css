@@ -94,3 +94,9 @@
     object-fit: cover;
     cursor: pointer;
   }
+
+  .btn {
+    border-radius: 10px;
+    border: solid 2px rgb(247, 242, 242);
+    color: rgb(247, 248, 248);
+  }
