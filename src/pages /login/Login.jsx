@@ -50,7 +50,7 @@ export default function Login() {
         <div className="loginRight">
           <div className="loginBox">
             <form action="" className="form_login" onSubmit={handleSubmit}>
-              <input placeholder="Email" 
+              <input placeholder="Username" 
               className="loginInput" 
               name="username"
               onChange={handleChange} 

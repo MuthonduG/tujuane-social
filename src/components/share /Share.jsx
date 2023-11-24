@@ -49,7 +49,7 @@ export default function Share() {
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfileImg" src="/assets/person/1.jpeg" alt="" />
+          <img className="shareProfileImg" src="https://img.freepik.com/premium-vector/happy-face-with-wide-open-smile-cartoon-emotion_80590-17036.jpg" alt="" />
           <form action="" className="share__form" onSubmit={handleSubmit}>
             <input
               placeholder="Title"
