@@ -41,13 +41,13 @@ export default function Login() {
         <div className="loginLeft">
           <h3 className="loginLogo">Tujuane Social</h3>
           <span className="loginDesc">
-            <img src="https://media4.giphy.com/media/jQmn1Dkw55R3cjm3eC/giphy.gif" alt="" />
+            <img src="https://i.pinimg.com/originals/ec/ec/36/ecec3687a972a20d8ba953b7f1bf4e43.gif" alt="" />
           </span>
         </div>
         <div className="loginRight">
           <div className="loginBox">
             <form action="" className="form_login" onSubmit={handleSubmit}>
-              <input placeholder="Email" 
+              <input placeholder="Username" 
               className="loginInput" 
               name="email"
               type="email"
