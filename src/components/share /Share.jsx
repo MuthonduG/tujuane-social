@@ -5,6 +5,15 @@ import { MdOutlineRoom } from "react-icons/md";
 import { FaRegSmileBeam } from "react-icons/fa";
 
 export default function Share() {
+  const token = localStorage.getItem('authToken');
+
+  // Check if the token exists before logging it
+  if (token) {
+    console.log('Authorization Token:', token);
+  } else {
+    console.log('No Authorization Token found.');
+  }
+  
   return (
     <div className="share">
       <div className="shareWrapper">

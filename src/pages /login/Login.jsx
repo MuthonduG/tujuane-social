@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function Login() {
   const [user, setUser] = React.useState({
-    email: '',
+    username: '',
     password: ''
   })
   const [error, setError] = React.useState(false)
@@ -21,7 +21,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const userData = {
-      email: user.email,
+      username: user.username,
       password: user.password
     }
     try {
@@ -47,10 +47,9 @@ export default function Login() {
         <div className="loginRight">
           <div className="loginBox">
             <form action="" className="form_login" onSubmit={handleSubmit}>
-              <input placeholder="Username" 
+              <input placeholder="Email" 
               className="loginInput" 
-              name="email"
-              type="email"
+              name="username"
               onChange={handleChange} 
               required/>
               <input placeholder="Password" 
