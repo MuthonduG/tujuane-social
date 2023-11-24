@@ -30,7 +30,7 @@ export default function Share() {
     const token = localStorage.getItem('authToken');
   
     try {
-      await axios.post('http://127.0.0.1:3000/create_post', postData, {
+      await axios.post('https://api-one-z7uj.onrender.com/create_post', postData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

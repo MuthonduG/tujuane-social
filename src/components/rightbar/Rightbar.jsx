@@ -11,7 +11,7 @@ export default function Rightbar({ profile }) {
       try {
         const token = localStorage.getItem('authToken');
         
-        const response = await axios.get('http://127.0.0.1:3000/users', {
+        const response = await axios.get('https://api-one-z7uj.onrender.com/users', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

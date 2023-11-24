@@ -25,7 +25,7 @@ export default function Login() {
       password: user.password
     }
     try {
-      const response = await axios.post('http://127.0.0.1:3000/log_in', userData);
+      const response = await axios.post('https://api-one-z7uj.onrender.com/log_in', userData);
 
       if (response.status === 200) {
         const token = response.data;

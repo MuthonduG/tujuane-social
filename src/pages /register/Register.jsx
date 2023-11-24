@@ -27,7 +27,7 @@ export default function Register() {
       zipcode: user.zipcode
     }
     try {
-      await axios.post('http://127.0.0.1:3000/sign_up', userData).then((response) => {
+      await axios.post('https://api-one-z7uj.onrender.com/sign_up', userData).then((response) => {
         if (response.status === 201) {
           navigate('/login');
         }
